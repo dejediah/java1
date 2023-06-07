@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class slay {
     //bubble sort algorithm
-     static void bubbleSort(int[] arr, String[] arr2, int length) {
+    static void bubbleSort(int[] arr, String[] arr2, int length) {
         int n = length;
         int temp = 0;
         for(int i=0; i < n; i++){
@@ -32,20 +32,20 @@ public class slay {
             }
         }
     }
-    static void usersearch(String arr2[], String search, int arr[]){
-        int output = StringSearch(arr2, search);
-        
+    static void usersearch(String arr2[], String search, int arr[], int length){
+        int output = StringSearch(arr2, search, length);
+
         if (output<0){
-            System.out.println(search + "is not in inventory");
+            System.out.println(search + " is not in inventory");
         }
         else{
-            System.out.println("The product " + search + "is in the inventory, containing " + arr[output] + "items");
+            System.out.println("The product " + search + " is in the inventory, containing " + arr[output] + "items");
         }
-        
+
     }
 
-        public static int StringSearch(String []arr,String target){
-        int n = arr.length;
+    public static int StringSearch(String []arr,String target, int length){
+        int n = length;
         for(int i = 0; i<n;i++){
             if(arr[i].equalsIgnoreCase(target) ){
                 return i;
@@ -57,11 +57,11 @@ public class slay {
         return -1;
 
     }
-    
+
     public static void main(String[] args) {
         String search = "oranges";
         int arr[] = new int[64];
-            //use *STRING* arr2[] for the product name input
+        //use *STRING* arr2[] for the product name input
         String arr2[] = new String[64];
 
         // n is length of array
@@ -103,8 +103,8 @@ public class slay {
 
         }
 
-                 
-                 System.out.println(" ");
+
+        System.out.println(" ");
 
         System.out.println("Unsorted Products");
         for(int i=0; i < n; i++){
@@ -124,10 +124,10 @@ public class slay {
         for(int i = (n - 1); i > -1; i--){
             System.out.println("Product name: " + arr2[i] + " " + "\nProduct amount: "+ arr[i]);
             System.out.println(" ");
-        
-   
-        }  
+
+
+        }
         System.out.println("Searching");
-        usersearch(arr2, search, arr);
+        usersearch(arr2, search, arr, n);
     }
 }
