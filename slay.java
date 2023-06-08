@@ -44,9 +44,9 @@ public class maribel {
         int output = StringSearch(arr2, search, length);
 
         if (output < 0) {
-            System.out.println(search + " is not in inventory");
+            System.out.println(search + " is not in the inventory.");
         } else {
-            System.out.println("The product " + search + " is in the inventory, containing " + arr[output] + " items");
+            System.out.println("The product " + search + " is in the inventory, containing " + arr[output] + " items.");
         }
 
     }
@@ -122,7 +122,7 @@ public class maribel {
 
             do {
             System.out.println("Hello " + name +"!" + " What would you like to do with the inventory?");
-            System.out.println("Codes: \n 1: Unsorted Products \n 2: Sorted Products (Ascending) \n 3: Sorted Products (Descending) \n 4: Searching \n E: Exit Program");
+            System.out.println("Codes: \n 1: Unsorted Products \n 2: Sort Products by Amount (Ascending) \n 3: Sort Products by Amount (Descending) \n 4: Search for item \n E: Exit Program");
             System.out.println("Input: ");
 
             code = userin.next();
@@ -173,7 +173,7 @@ public class maribel {
                         System.out.println("Please input product to search: ");
                         String search = searcher.next();
                         System.out.println("================================================ ");
-                        System.out.println("Searching");
+                        System.out.println("Searching...");
                         usersearch(arr2, search, arr, n);
                         System.out.println("================================================ ");
                     } while (subex == 2);
