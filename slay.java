@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  * @author armin
  */
 
-public class maribel {
+public class inventory {
 
     static void bubbleSort(int[] arr, String[] arr2, int length) {
         int n = length;
